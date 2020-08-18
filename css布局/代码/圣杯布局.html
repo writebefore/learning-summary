@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浏览器默认的内外边距 */
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            min-width: 600px;
+        }
+        .header{
+            width: 100%;
+            background-color: cadetblue;
+            text-align: center;
+        }
+        .container{
+            padding: 0 200px 0 200px;
+            /* overflow: auto; */
+        }
+
+        .main{
+            width: 100%;
+            background: chocolate;
+            float: left;
+            text-align: center;
+        }
+
+        /* margin负值 */
+        .left{
+            width: 200px;
+            float: left;
+            background-color: darkgoldenrod;
+            margin-left: -100%;
+            position: relative;
+            right: 200px;
+            text-align: center;
+        }
+
+        .right{
+            width: 200px;
+            float: left;
+            background-color: darkgreen;
+            margin-right: -200px;
+            text-align: center;
+        }
+
+        .footer{
+            width: 100%;
+            background-color: burlywood;
+            text-align: center;
+        }
+
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">header</div>
+    <div class="container clearfix">
+        <div class="main">main</div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>
