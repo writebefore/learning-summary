@@ -8,7 +8,6 @@
 - ```float布局```
 - ```margin负值```，让两侧区域与中间区域横向重叠
 ## 初步搭建框架
----
 >以左右两侧区域都为```200px```，中间区域自适应为例子
 
 - HTML代码如下
@@ -61,7 +60,6 @@
 - 此时效果图
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cb5dd17172b940c696ae934dd234e5f5~tplv-k3u1fbpfcp-zoom-1.image)
 ## 调整左侧区域的位置
----
 > ```margin-top```、```margin-left```为负值时，元素会向上、向左移动
 >
 > ```margin-right```、```margin-bottom```为负值时，右侧元素左移、下侧元素上移
@@ -91,7 +89,6 @@
 ![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b4d55a255f54d86a115c97e68f83464~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## 调整右侧区域位置
----
 ```Css
 .right{
     width: 200px;
@@ -107,10 +104,9 @@
 ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fe016e3a1d9941cbbc3db2738184d724~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## 清除浮动
----
-> 看看此时包裹main、left、right区域的父容器container
-> ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/248b8f2152d64977b481f937f1439319~tplv-k3u1fbpfcp-zoom-1.image)
-> 因为子元素的浮动，高度为0
+看看此时包裹main、left、right区域的父容器container，因为子元素的浮动，高度为0
+![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/248b8f2152d64977b481f937f1439319~tplv-k3u1fbpfcp-zoom-1.image)
+因为子元素的浮动，高度为0
 
 - 通过让父容器触发```BFC```解决
 ```Css
@@ -141,7 +137,6 @@
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41a6b0ef335b40e0975a2931e6b57a1a~tplv-k3u1fbpfcp-zoom-1.image)
 
 ## 谈谈最小宽度设置问题
----
 - 当页面宽度小于600px时，页面会发生明显的错位
 ![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9909d77d486348a690f8a2b123a1a356~tplv-k3u1fbpfcp-zoom-1.image)
 - 看看此时```left```区域未使用```相对定位```的位置
